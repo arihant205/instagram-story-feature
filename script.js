@@ -14,7 +14,7 @@ arr.forEach(function(val,index){
 })
 document.querySelector("#storiya").innerHTML=temp
 
-
+var grow=0;
 document.querySelector("#storiya").addEventListener("click",function(details){
     
     document.querySelector("#fullscr").style.display="block"   
@@ -23,7 +23,16 @@ document.querySelector("#storiya").addEventListener("click",function(details){
     setTimeout(function(){ 
         document.querySelector("#fullscr").style.display="none"
     },3000)
-    
+    //we use set interval function tu make the line effect
+    if(grow<10){
+    setInterval(function(){
+        document.querySelector("#growth").style.width=`${grow}%`;
+        grow++;
+    },30)
+    }
+    else {
+        grow=0;
+    }
 })
 document.querySelector("#fullscr").addEventListener("click",function(){
     document.querySelector("#fullscr").style.display="none"
