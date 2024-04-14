@@ -18,8 +18,11 @@ document.querySelector("#storiya").innerHTML=temp
 document.querySelector("#storiya").addEventListener("click",function(details){
     
     document.querySelector("#fullscr").style.display="block"   
-    document.querySelector("#fullscr").style.backgroundImage=`url(${arr[details.target.id].img})`  
+    document.querySelector("#fullscr").style.backgroundImage=`url(${arr[details.target.id].img})` 
 
+    setTimeout(function(){ 
+        document.querySelector("#fullscr").style.display="none"
+    },3000)
     
 })
 document.querySelector("#fullscr").addEventListener("click",function(){
