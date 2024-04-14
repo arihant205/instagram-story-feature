@@ -43,7 +43,17 @@ html,body{
     background-size: cover;
     object-fit: cover;
     object-position: center;
-    
+    padding-top: 8px;
+}
+#line{
+    width: 100%;
+    height: 4px;
+    background-color: rgb(68, 68, 68);
+}
+#growth{
+    width: 10%;
+    height: 100%;
+    background-color: #e6e3e3;
 }
 .story{
     display: inline-block;
